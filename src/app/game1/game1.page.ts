@@ -24,7 +24,12 @@ export class Game1Page implements OnInit {
     await this.storage.create();
     await this.storage.set("review1", this.userReview);
   }
-
+  
+  async onDelete(){
+    await this.storage.create();
+    await this.storage.set("review1", null);
+    this.userReview = await this.storage.get('review1');
+  }
 
   async openBrowser() {
     await Browser.open({ url: this.steamStore + this.gameID });

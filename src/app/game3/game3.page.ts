@@ -23,6 +23,12 @@ export class Game3Page implements OnInit {
     await this.storage.create();
     await this.storage.set("review3", this.userReview);
   }
+  
+  async onDelete(){
+    await this.storage.create();
+    await this.storage.set("review3", null);
+    this.userReview = await this.storage.get('review3');
+  }
 
   async openBrowser() {
     await Browser.open({ url: this.steamStore + this.gameID });
