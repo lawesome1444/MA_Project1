@@ -13,34 +13,37 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/337000/header.jpg?t=1675708510">
-      </ion-thumbnail>
-      <h3 [routerLink]="['/game1']">Deus Ex: Mankind Divided</h3>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1237970/header.jpg?t=1668565264">
-      </ion-thumbnail>
-      <h3 [routerLink]="['/game2']">Titanfall 2</h3>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1378990/header.jpg?t=1666113934">
-      </ion-thumbnail>
-      <h3 [routerLink]="['/game3']">Crash Bandicoot 4: It's About Time</h3>
-    </ion-item>
-
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="https://cdn.akamai.steamstatic.com/steam/apps/736260/header.jpg?t=1656225237">
-      </ion-thumbnail>
-      <h3 [routerLink]="['/game4']">Baba is You</h3>
-    </ion-item>
-  </ion-list>
-
+  <ion-card>
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/337000/header.jpg?t=1675708510" />
+    <ion-card-header>
+      <ion-card-title>Deus Ex: Mankind Divided</ion-card-title>
+      <ion-button fill="clear" [routerLink]="['/game1']">Check Review</ion-button>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1237970/header.jpg?t=1668565264" />
+    <ion-card-header>
+      <ion-card-title>Titanfall 2</ion-card-title>
+      <ion-button fill="clear" [routerLink]="['/game2']">Check Review</ion-button>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/1378990/header.jpg?t=1666113934" />
+    <ion-card-header>
+      <ion-card-title>Crash Bandicoot 4: It's About Time</ion-card-title>
+      <ion-button fill="clear" [routerLink]="['/game3']">Check Review</ion-button>
+    </ion-card-header>
+  </ion-card>
+  
+  <ion-card>
+    <img src="https://cdn.akamai.steamstatic.com/steam/apps/736260/header.jpg?t=1656225237" />
+    <ion-card-header>
+      <ion-card-title>Baba is You</ion-card-title>
+      <ion-button fill="clear" [routerLink]="['/game4']">Check Review</ion-button>
+    </ion-card-header>
+  </ion-card>
+  
+        
 </ion-content>
