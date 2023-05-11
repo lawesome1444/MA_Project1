@@ -1,38 +1,37 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-back-button slot="start"></ion-back-button>
-    <ion-title>Deus Ex: Mankind Divided</ion-title>
+    <ion-title>Titanfall 2</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <ion-header collapse="condense">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Deus Ex: Mankind Divded</ion-title>
+      <ion-title size="large">Titanfall 2</ion-title>
     </ion-toolbar>
   </ion-header>
 
-
   <div id="container">
-    <img src="https://cdn.akamai.steamstatic.com/steam/apps/337000/header.jpg?t=1675708510">
+    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg?t=1668565264">
   </div>
   <div id="container">
     <ion-item>
-    <h3>Price: €49.99</h3>
+    <h3>Price: €29.99</h3>
     <ion-button (click)="openBrowser()">Buy on Steam</ion-button>
   </ion-item>
   </div>
   <h3>Pros</h3>
   <ul>
-    <li>Fantastic Setting</li>
-    <li>Much Improved Gunplay</li>
-    <li>Player Choice Impacts Story</li>
+    <li>Great Story</li>
+    <li>Fantastic Movement + Gameplay</li>
+    <li>Best in Class Audio Design</li>
   </ul>
   <h3>Cons</h3>
   <ul>
-    <li>Very Poor Performance</li>
-    <li>Backtracking is Frequent</li>
-    <li>Ammo is Scarce</li>
+    <li>Frequent Loading Screens</li>
+    <li>Short Campaign</li>
+    <li>Multiplayer is Unplayable</li>
   </ul>
 
   <h3>User Rating: {{userReview}}</h3>
@@ -60,5 +59,4 @@
       </ion-item>
     </ion-list>
   </ion-radio-group>
-
 </ion-content>

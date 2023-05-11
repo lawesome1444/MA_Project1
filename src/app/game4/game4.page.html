@@ -1,39 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-back-button slot="start"></ion-back-button>
-    <ion-title>Deus Ex: Mankind Divided</ion-title>
+    <ion-title>Baba is You</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <ion-header collapse="condense">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Deus Ex: Mankind Divded</ion-title>
+      <ion-title size="large">Baba is You</ion-title>
     </ion-toolbar>
   </ion-header>
 
-
   <div id="container">
-    <img src="https://cdn.akamai.steamstatic.com/steam/apps/337000/header.jpg?t=1675708510">
+    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/736260/header.jpg?t=1656225237">
   </div>
   <div id="container">
     <ion-item>
-    <h3>Price: €49.99</h3>
+    <h3>Price: €12.49</h3>
     <ion-button (click)="openBrowser()">Buy on Steam</ion-button>
   </ion-item>
   </div>
   <h3>Pros</h3>
   <ul>
-    <li>Fantastic Setting</li>
-    <li>Much Improved Gunplay</li>
-    <li>Player Choice Impacts Story</li>
+    <li>Great Soundtrack</li>
+    <li>Innovative Puzzles</li>
+    <li>Low Price</li>
   </ul>
   <h3>Cons</h3>
   <ul>
-    <li>Very Poor Performance</li>
-    <li>Backtracking is Frequent</li>
-    <li>Ammo is Scarce</li>
+    <li>Juggling Dozens of Variables gets Complicated</li>
+    <li>World Map is Confusing</li>
+    <li>No Hint System</li>
   </ul>
+
 
   <h3>User Rating: {{userReview}}</h3>
   <ion-radio-group [(ngModel)]="userReview">
@@ -60,5 +60,4 @@
       </ion-item>
     </ion-list>
   </ion-radio-group>
-
 </ion-content>
