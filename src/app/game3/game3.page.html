@@ -12,51 +12,104 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <ion-card>
     <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1378990/header.jpg?t=1666113934">
-  </div>
-  <div id="container">
-    <ion-item>
-    <h3>Price: €39.99</h3>
-    <ion-button (click)="openBrowser()">Buy on Steam</ion-button>
-  </ion-item>
-  </div>
-  <h3>Pros</h3>
-  <ul>
-    <li>Best Crash Gameplay</li>
-    <li>Platforming is Fun</li>
-    <li>Fun New Art-Style</li>
-  </ul>
-  <h3>Cons</h3>
-  <ul>
-    <li>Levels are Far Too Long (8+ minutes)</li>
-    <li>106% Completion is extremely tedious</li>
-    <li>Lack of Polish in Later Levels</li>
-  </ul>
+  <ion-card-header>
+    <ion-card-title>Price: €39.99</ion-card-title>
+    <ion-button (click)="openBrowser()" color="dark">Buy on Steam</ion-button>
+  </ion-card-header>
+</ion-card>
 
-  <h3>User Rating: {{userReview}}</h3>
-  <ion-radio-group [(ngModel)]="userReview">
+
+<ion-card>
+  <!--This single card is divided into two sections, the Pros of the game and the Cons of the game-->
+  <ion-card-header>
+    <ion-card-title>Pros</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-icon  name="add-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Best Crash Gameplay</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="add-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Platforming is Fun</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="add-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Fun New Art-Style</ion-label>
+      </ion-item>
+    
+    </ion-list>
+
+  </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-title>Cons</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-icon  name="remove-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Levels are Far Too Long (8+ minutes)</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="remove-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>106% Completion is extremely tedious</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="remove-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Lack of Polish in Later Levels</ion-label>
+      </ion-item>
+    
+    </ion-list>
+
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>User Rating: {{userReview}}</ion-card-title>
+    <ion-card-subtitle>Rate the Game</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-radio-group [(ngModel)]="userReview">
     <ion-list>
       <ion-item>
         <ion-label>5</ion-label>
         <ion-radio value=5></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>4</ion-label>
         <ion-radio value=4></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>3</ion-label>
         <ion-radio value=3></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>2</ion-label>
         <ion-radio value=2></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>1</ion-label>
         <ion-radio value=1></ion-radio>
       </ion-item>
+
     </ion-list>
   </ion-radio-group>
+  </ion-card-content>
+</ion-card>
 </ion-content>

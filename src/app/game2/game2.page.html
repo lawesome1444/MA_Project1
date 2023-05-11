@@ -12,51 +12,104 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <ion-card>
     <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/header.jpg?t=1668565264">
-  </div>
-  <div id="container">
-    <ion-item>
-    <h3>Price: €29.99</h3>
-    <ion-button (click)="openBrowser()">Buy on Steam</ion-button>
-  </ion-item>
-  </div>
-  <h3>Pros</h3>
-  <ul>
-    <li>Great Story</li>
-    <li>Fantastic Movement + Gameplay</li>
-    <li>Best in Class Audio Design</li>
-  </ul>
-  <h3>Cons</h3>
-  <ul>
-    <li>Frequent Loading Screens</li>
-    <li>Short Campaign</li>
-    <li>Multiplayer is Unplayable</li>
-  </ul>
+  <ion-card-header>
+    <ion-card-title>Price: €29.99</ion-card-title>
+    <ion-button (click)="openBrowser()" color="dark">Buy on Steam</ion-button>
+  </ion-card-header>
+</ion-card>
 
-  <h3>User Rating: {{userReview}}</h3>
-  <ion-radio-group [(ngModel)]="userReview">
+
+<ion-card>
+  <!--This single card is divided into two sections, the Pros of the game and the Cons of the game-->
+  <ion-card-header>
+    <ion-card-title>Pros</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-icon  name="add-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Great Story</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="add-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Fantastic Movement + Gameplay</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="add-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Best in Class Audio Design</ion-label>
+      </ion-item>
+    
+    </ion-list>
+
+  </ion-card-content>
+
+  <ion-card-header>
+    <ion-card-title>Cons</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+
+      <ion-item>
+        <ion-icon  name="remove-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Frequent Loading Screens</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="remove-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Short Campaign</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-icon  name="remove-outline" size="small"></ion-icon>&nbsp;&nbsp;
+        <ion-label text-wrap>Multiplayer is Unplayable</ion-label>
+      </ion-item>
+    
+    </ion-list>
+
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>User Rating: {{userReview}}</ion-card-title>
+    <ion-card-subtitle>Rate the Game</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-radio-group [(ngModel)]="userReview">
     <ion-list>
       <ion-item>
         <ion-label>5</ion-label>
         <ion-radio value=5></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>4</ion-label>
         <ion-radio value=4></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>3</ion-label>
         <ion-radio value=3></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>2</ion-label>
         <ion-radio value=2></ion-radio>
       </ion-item>
+
       <ion-item>
         <ion-label>1</ion-label>
         <ion-radio value=1></ion-radio>
       </ion-item>
+
     </ion-list>
   </ion-radio-group>
+  </ion-card-content>
+</ion-card>
 </ion-content>
