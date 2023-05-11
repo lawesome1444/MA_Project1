@@ -13,9 +13,15 @@
   </ion-header>
 
     <ion-card>
-      <img src="https://cdn.akamai.steamstatic.com/steam/apps/337000/header.jpg?t=1675708510">
+      <!--The API Way
+      <img [src]="gameImage">-->
+      <!--The Compromise-->
+      <img [src]="steamImage">
     <ion-card-header>
-      <ion-card-title>Price: €49.99</ion-card-title>
+      <!--The API Way
+      <ion-card-title>Price: €{{gamePrice}}</ion-card-title>-->
+      <!--The Compromise-->
+      <ion-card-title>Price: €{{steamPrice}}</ion-card-title>
       <ion-button (click)="openBrowser()" color="dark">Buy on Steam</ion-button>
     </ion-card-header>
   </ion-card>
@@ -110,7 +116,9 @@
 
       </ion-list>
     </ion-radio-group>
+    <!--Save the User Review-->
     <ion-button (click)="onSave()" color="dark">Save Review</ion-button>
+    <!--Delete the User Review-->
     <ion-button (click)="onDelete()" color="dark">Delete Review</ion-button>
     </ion-card-content>
   </ion-card>
