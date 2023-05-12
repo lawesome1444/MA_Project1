@@ -1,5 +1,6 @@
 # Quick Reviews App.
 Welcome to the Quick Reviews App.
+Built on Ionic 6.20.9
 
 To open the app please follow these instructions:
 * Create a new folder (e.g on Desktop). Open it, type "cmd" into the file path then hit enter
